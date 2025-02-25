@@ -3,6 +3,7 @@ import {
   TextFieldProps as RACTextFieldProps,
   ValidationResult,
 } from "react-aria-components";
+import { cn } from "../lib/utils";
 import { FieldDescription } from "./FieldDescription";
 import { FieldError } from "./FieldErrors";
 import { Input } from "./Input";
@@ -18,11 +19,22 @@ export function TextField({
   label,
   description,
   errorMessage,
+  className,
   ...props
 }: TextFieldProps) {
   return (
-    <RACTextField {...props}>
-      {label && <Label>{label}</Label>}
+    <RACTextField
+      {...props}
+      className={cn("group relative flex flex-col gap-xs", className)}
+    >
+      {label && (
+        <Label>
+          {label}{" "}
+          <span className="text-sm leading-[17px] font-[550] tracking-[0.16px] text-content-on-neutral-medium group-data-invalid:text-surface-danger-variant group-data-required:hidden">
+            Optional
+          </span>
+        </Label>
+      )}
       <Input />
       {description && <FieldDescription>{description}</FieldDescription>}
       <FieldError>{errorMessage}</FieldError>

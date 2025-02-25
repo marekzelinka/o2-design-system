@@ -1,1 +1,67 @@
 @import "tailwindcss";
+
+@theme {
+  /* NOTE: Cant use this commercial font: "On Air Ver" */
+
+  --color-*: initial;
+  --color-core-gray-00: #ffffff;
+  --color-core-gray-300: #c9c9ce;
+  --color-core-gray-500: #8c8c9a;
+  --color-core-gray-950: #2c2c31;
+  --color-o2-blue-500: #0050ff;
+  --color-core-red-100: #ffdcdc;
+  --color-core-red-600: #dc2828;
+  --color-core-red-700: #a56315;
+  --color-core-yellow-100: #faf1b6;
+  --color-core-yellow-700: #a56315;
+  --color-core-alpha-dim-50: #1a1a1a0f;
+  --color-core-alpha-dim-800: #1a1a1acc;
+
+  --radius-*: initial;
+  --radius-input: 12px;
+
+  --spacing-*: initial;
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing-m: 16px;
+  --spacing-l: 20px;
+  --spacing-2xl: 36px;
+  --spacing-5xl: 48px;
+
+  /* Font styles */
+  --body-m-font-size: 16px;
+  --body-m-font-weight: 400;
+  --body-m-line-height: 22px;
+  --body-m-letter-spacing: 0.011px;
+  --label-s-font-size: 14px;
+  --label-s-font-weight: 550;
+  --label-s-line-height: 17px;
+  --label-s-letter-spacing: 0.16px;
+  --label-m-font-size: 16px;
+  --label-m-font-weight: 500;
+  --label-m-line-height: 22px;
+  --label-m-letter-spacing: 0.16px;
+}
+
+@theme inline {
+  /* Surface colors */
+  --color-surface-x-high: var(--color-core-gray-500);
+  --color-surface-x-low: var(--color-core-gray-00);
+  --color-surface-brand: var(--color-o2-blue-500);
+  --color-surface-warning: var(--color-core-yellow-700);
+  --color-surface-warning-variant: var(--color-core-yellow-100);
+  --color-surface-danger: var(--color-core-red-600);
+  --color-surface-danger-variant: var(--color-core-red-100);
+
+  /* Content colors */
+  --color-content-on-neutral-low: var(--color-core-gray-300);
+  --color-content-on-neutral-medium: var(--color-core-gray-500);
+  --color-content-on-neutral-xx-high: var(--color-core-gray-950);
+  --color-content-on-neutral-warning: var(--color-core-red-700);
+  --color-content-on-neutral-danger: var(--color-core-red-600);
+
+  /* State colors */
+  --color-state-default-hover: var(--color-core-alpha-dim-50);
+  --color-state-default-focus: var(--color-core-alpha-dim-800);
+}

@@ -3,5 +3,5 @@
     "prettier-plugin-organize-imports",
     "prettier-plugin-tailwindcss"
   ],
-  "tailwindStylesheet": "./app/index.css"
+  "tailwindStylesheet": "./src/index.css"
 }
