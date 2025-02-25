@@ -30,7 +30,7 @@ export function TextField({
       {label && (
         <Label>
           {label}{" "}
-          <span className="text-sm leading-[17px] font-[550] tracking-[0.16px] text-content-on-neutral-medium group-data-invalid:text-surface-danger-variant group-data-required:hidden">
+          <span className="text-sm leading-[17px] font-[550] tracking-[0.16px] text-content-on-neutral-medium group-data-required:hidden">
             Optional
           </span>
         </Label>

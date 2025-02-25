@@ -2,12 +2,17 @@ import type { Meta } from "@storybook/react";
 import { Form } from "react-aria-components";
 import { TextField } from "./TextField";
 
-export const Example = (args: any) => <TextField {...args} />;
+export const Default = (args: any) => <TextField {...args} />;
+
+export const Required = (args: any) => <TextField {...args} isRequired />;
+
+export const Invalid = (args: any) => <TextField {...args} isInvalid />;
+
+export const Disabled = (args: any) => <TextField {...args} isDisabled />;
 
 export const Validation = (args: any) => (
-  <Form className="flex flex-col items-start gap-2">
+  <Form method="post">
     <TextField {...args} />
-    <button type="submit">Submit</button>
   </Form>
 );
 Validation.args = {
