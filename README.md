@@ -22,7 +22,7 @@
 
 ## Začíname
 
-Potrebujeme [Node.js](https://nodejs.org/), aspoň **verziu > 22**, [pnpm](https://pnpm.io/) a [Git](https://git-scm.com/). 
+Potrebujeme [Node.js](https://nodejs.org/), aspoň **verziu >= 22**, [pnpm](https://pnpm.io/) a [Git](https://git-scm.com/). 
 
 1. Klonujte tento git repositar pomocou:
 
