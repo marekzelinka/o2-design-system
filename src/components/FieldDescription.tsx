@@ -1,5 +1,6 @@
 import { Text, type TextProps } from "react-aria-components";
 import { cn } from "../lib/utils";
+import { labelVariants } from "./Label";
 
 export type FieldDescriptionProps = TextProps;
 
@@ -11,7 +12,8 @@ export function FieldDescription({
     <Text
       slot="description"
       className={cn(
-        "text-sm leading-[17px] font-[550] tracking-[0.16px] text-content-on-neutral-medium",
+        labelVariants({ size: "sm" }),
+        "text-content-on-neutral-medium",
         className,
       )}
       {...props}

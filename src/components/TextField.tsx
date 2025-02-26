@@ -7,7 +7,7 @@ import { cn } from "../lib/utils";
 import { FieldDescription } from "./FieldDescription";
 import { FieldError } from "./FieldErrors";
 import { Input } from "./Input";
-import { Label } from "./Label";
+import { Label, labelVariants } from "./Label";
 
 export interface TextFieldProps extends RACTextFieldProps {
   label?: string;
@@ -25,12 +25,17 @@ export function TextField({
   return (
     <RACTextField
       {...props}
-      className={cn("group relative flex flex-col gap-xs", className)}
+      className={cn("group flex flex-col gap-xs", className)}
     >
       {label && (
-        <Label>
+        <Label className="flex items-center gap-xs">
           {label}{" "}
-          <span className="text-sm leading-[17px] font-[550] tracking-[0.16px] text-content-on-neutral-medium group-data-required:hidden">
+          <span
+            className={cn(
+              labelVariants({ size: "sm" }),
+              "text-content-on-neutral-medium group-data-required:hidden",
+            )}
+          >
             Optional
           </span>
         </Label>

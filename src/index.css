@@ -1,67 +1,98 @@
 @import "tailwindcss";
 
-@theme {
-  /* NOTE: Cant use this commercial font: "On Air Ver" */
+:root {
+  --font-family: "On Air Var";
 
-  --color-*: initial;
-  --color-core-gray-00: #ffffff;
-  --color-core-gray-300: #c9c9ce;
-  --color-core-gray-500: #8c8c9a;
-  --color-core-gray-950: #2c2c31;
-  --color-o2-blue-500: #0050ff;
-  --color-core-red-100: #ffdcdc;
-  --color-core-red-600: #dc2828;
-  --color-core-red-700: #a56315;
-  --color-core-yellow-100: #faf1b6;
-  --color-core-yellow-700: #a56315;
-  --color-core-alpha-dim-50: #1a1a1a0f;
-  --color-core-alpha-dim-800: #1a1a1acc;
-
-  --radius-*: initial;
-  --radius-input: 12px;
-
-  --spacing-*: initial;
-  --spacing-2xs: 4px;
-  --spacing-xs: 8px;
-  --spacing-s: 12px;
-  --spacing-m: 16px;
-  --spacing-l: 20px;
-  --spacing-2xl: 36px;
-  --spacing-5xl: 48px;
-
-  /* Font styles */
-  --body-m-font-size: 16px;
-  --body-m-font-weight: 400;
-  --body-m-line-height: 22px;
-  --body-m-letter-spacing: 0.011px;
-  --label-s-font-size: 14px;
-  --label-s-font-weight: 550;
-  --label-s-line-height: 17px;
-  --label-s-letter-spacing: 0.16px;
-  --label-m-font-size: 16px;
-  --label-m-font-weight: 500;
+  --label-m-size: 16px;
+  --label-m-weight: 500;
   --label-m-line-height: 22px;
   --label-m-letter-spacing: 0.16px;
+
+  --label-s-size: 14px;
+  --label-s-weight: 550;
+  --label-s-line-height: 17px;
+  --label-s-letter-spacing: 0.16px;
+
+  --body-m-size: 16px;
+  --body-m-weight: 400;
+  --body-m-line-height: 22px;
+  --body-m-letter-spacing: 0.01px;
+  --body-m-paragraph-spacing: 20px;
+  --body-m-list-spacing: 6px;
+
+  --dimension-radius-input: 12px;
+
+  --dimension-2xs: 4px;
+  --dimension-xs: 8px;
+  --dimension-s: 12px;
+  --dimension-m: 16px;
+  --dimension-l: 20px;
+  --dimension-xl: 36px;
+  --dimension-2xl: 48px;
+}
+
+@theme {
+  --*: initial;
+
+  --font-sans: var(--font-family);
+
+  --color-gray-00: #ffffff;
+  --color-gray-300: #c9c9ce;
+  --color-gray-500: #8c8c9a;
+  --color-gray-950: #2c2c31;
+
+  --color-o2-blue-500: #0050ff;
+
+  --color-red-100: #ffdcdc;
+  --color-red-600: #dc2828;
+  --color-red-700: #a56315;
+
+  --color-alpha-dim-50: #1a1a1a0f;
+  --color-alpha-dim-800: #1a1a1acc;
+
+  --spacing-2xs: var(--dimension-2xs);
+  --spacing-xs: var(--dimension-xs);
+  --spacing-s: var(--dimension-s);
+  --spacing-m: var(--dimension-m);
+  --spacing-l: var(--dimension-l);
+  --spacing-2xl: var(--dimension-2xl);
+  --spacing-5xl: var(--dimension-5xl);
+
+  --text-body-m: var(--body-m-size);
+  --text-body-m--line-height: var(--body-m-line-height);
+  --text-label-m: var(--label-m-size);
+  --text-label-m--line-height: var(--label-m-line-height);
+  --text-label-s: var(--label-s-size);
+  --text-label-s--line-height: var(--label-s-line-height);
+
+  --font-weight-body-m: var(--body-m-weight);
+  --font-weight-label-m: var(--label-m-weight);
+  --font-weight-label-s: var(--label-s-weight);
+
+  --tracking-body-m: var(--body-m-letter-spacing);
+  --tracking-label-m: var(--label-m-letter-spacing);
+  --tracking-label-s: var(--label-s-letter-spacing);
+
+  --leading-body-m: var(--body-m-line-height);
+  --leading-label-m: var(--label-m-line-height);
+  --leading-label-s: var(--label-s-line-height);
+
+  --radius-input: var(--dimension-radius-input);
 }
 
 @theme inline {
-  /* Surface colors */
-  --color-surface-x-high: var(--color-core-gray-500);
-  --color-surface-x-low: var(--color-core-gray-00);
+  --color-surface-x-low: var(--color-gray-00);
+  --color-surface-x-high: var(--color-gray-500);
   --color-surface-brand: var(--color-o2-blue-500);
-  --color-surface-warning: var(--color-core-yellow-700);
-  --color-surface-warning-variant: var(--color-core-yellow-100);
-  --color-surface-danger: var(--color-core-red-600);
-  --color-surface-danger-variant: var(--color-core-red-100);
+  --color-surface-danger-variant: var(--color-red-100);
+  --color-surface-danger: var(--color-red-600);
 
-  /* Content colors */
-  --color-content-on-neutral-low: var(--color-core-gray-300);
-  --color-content-on-neutral-medium: var(--color-core-gray-500);
-  --color-content-on-neutral-xx-high: var(--color-core-gray-950);
-  --color-content-on-neutral-warning: var(--color-core-red-700);
-  --color-content-on-neutral-danger: var(--color-core-red-600);
+  --color-content-on-neutral-low: var(--color-gray-300);
+  --color-content-on-neutral-medium: var(--color-gray-500);
+  --color-content-on-neutral-xx-high: var(--color-gray-950);
+  --color-content-on-neutral-danger: var(--color-red-600);
+  --color-content-on-neutral-warning: var(--color-red-700);
 
-  /* State colors */
-  --color-state-default-hover: var(--color-core-alpha-dim-50);
-  --color-state-default-focus: var(--color-core-alpha-dim-800);
+  --color-state-default-hover: var(--color-alpha-dim-50);
+  --color-state-default-focus: var(--color-alpha-dim-800);
 }

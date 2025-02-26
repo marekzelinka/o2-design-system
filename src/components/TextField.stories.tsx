@@ -4,11 +4,15 @@ import { TextField } from "./TextField";
 
 export const Default = (args: any) => <TextField {...args} />;
 
+export const WithDescription = (args: any) => (
+  <TextField {...args} description="Your name" />
+);
+
 export const Required = (args: any) => <TextField {...args} isRequired />;
 
-export const Invalid = (args: any) => <TextField {...args} isInvalid />;
-
 export const Disabled = (args: any) => <TextField {...args} isDisabled />;
+
+export const Invalid = (args: any) => <TextField {...args} isInvalid />;
 
 export const Validation = (args: any) => (
   <Form method="post">
