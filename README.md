@@ -1,7 +1,8 @@
-# Front-end React & UI developer/ka
+# O2 Design System
 
-| This project is an homework assignment for a **Front-end React developer role at O2**.
-| Rest of readme is in Slovak.
+> [!NOTE]  
+> This project is an homework assignment for a **Front-end React developer role at O2**.
+> Rest of readme is in Slovak.
 
 ## Zadanie
 
@@ -21,7 +22,9 @@
 
 ## Začíname
 
-1. Klonujte tento repositar pomocou:
+Potrebujeme [Node.js](https://nodejs.org/), aspoň **verziu > 22**, [pnpm](https://pnpm.io/) a [Git](https://git-scm.com/). 
+
+1. Klonujte tento git repositar pomocou:
 
    ```sh
    git clone https://github.com/marekzelinka/o2-design-system.git
