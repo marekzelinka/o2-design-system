@@ -1,29 +1,8 @@
 import type { Meta } from "@storybook/react";
 import { Form } from "react-aria-components";
-import { TextField } from "./TextField";
+import { TextField, type TextFieldProps } from "./TextField";
 
-export const Default = (args: any) => <TextField {...args} />;
-
-export const WithDescription = (args: any) => (
-  <TextField {...args} description="Your name" />
-);
-
-export const Required = (args: any) => <TextField {...args} isRequired />;
-
-export const Disabled = (args: any) => <TextField {...args} isDisabled />;
-
-export const Invalid = (args: any) => <TextField {...args} isInvalid />;
-
-export const Validation = (args: any) => (
-  <Form method="post">
-    <TextField {...args} />
-  </Form>
-);
-Validation.args = {
-  isRequired: true,
-};
-
-const meta: Meta<typeof TextField> = {
+const meta = {
   component: TextField,
   parameters: {
     layout: "centered",
@@ -32,6 +11,33 @@ const meta: Meta<typeof TextField> = {
   args: {
     label: "Name",
   },
-};
+} satisfies Meta<typeof TextField>;
 
 export default meta;
+
+export const Default = (props: TextFieldProps) => <TextField {...props} />;
+
+export const WithDescription = (props: TextFieldProps) => (
+  <TextField {...props} description="Your name" />
+);
+
+export const Required = (props: TextFieldProps) => (
+  <TextField {...props} isRequired />
+);
+
+export const Disabled = (props: TextFieldProps) => (
+  <TextField {...props} isDisabled />
+);
+
+export const Invalid = (props: TextFieldProps) => (
+  <TextField {...props} isInvalid />
+);
+
+export const Validation = (props: TextFieldProps) => (
+  <Form method="post">
+    <TextField {...props} />
+  </Form>
+);
+Validation.args = {
+  isRequired: true,
+};
